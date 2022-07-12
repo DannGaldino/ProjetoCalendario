@@ -1,0 +1,36 @@
+.container-fluid {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+}
+
+#background {
+    height: 1500px;
+    background-color: #403B39;
+    color: #F2F2F2;
+}
+
+#calendarioTitulo {
+    font-size: 70px;
+}
+
+.header {
+    height: 102px;
+    background-color: #3C4959;
+    color: #403B39;
+    -webkit-text-stroke: 1px #F2F2F2;
+    font-size: 40px;
+    border-bottom: 2px solid #F2F2F2;
+}
+
+.dropbutton {
+    float: right;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+button {
+    background-color: #3C4959;
+    border: solid #F2F2F2 2px;
+    color: #F2F2F2;
+    text-shadow: 1px solid black;
+}
