@@ -31,7 +31,8 @@ def loginAluno():
         return render_template('loginAluno.html', titulo='Página Principal', resultado=this.dados)
 
 @siteFlask.route('/calendario.html', methods=['GET','POST'])
-def calendar():        
+def calendar():
+        this.dados = ""        
         if request.method == 'POST':
             this.data = request.form['data']
             this.turno1 = request.form['turno']
@@ -40,6 +41,7 @@ def calendar():
 
 @siteFlask.route('/cadastrar.html', methods=['GET', 'POST'])
 def cadastro():
+    this.dados = ""
     if request.method == 'POST':
         this.email = request.form['tNovoEmail']
         this.senha = request.form['tNovaSenha']
@@ -49,6 +51,7 @@ def cadastro():
 
 @siteFlask.route('/atualizar.html', methods=['GET','POST'])
 def update():
+    this.dados = ""
     if request.method == 'POST':
         this.email = request.form['tEmail']
         this.campo = request.form['tCampo']
@@ -59,6 +62,7 @@ def update():
 
 @siteFlask.route('/excluir.html', methods=['GET', 'POST'])
 def excluirDados():
+    this.dados = ""
     if request.method == 'POST':
         this.email = request.form['tEmail']
         this.dados = excluirProfessor.excluir(this.email)
@@ -66,6 +70,7 @@ def excluirDados():
 
 @siteFlask.route('/agendar.html', methods=['GET','POST'])
 def agenda():
+    this.dados = ""
     dia = 0
     mes = 0
     ano = 0

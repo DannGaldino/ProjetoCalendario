@@ -79,6 +79,8 @@ def inserir(codigo, dia, mes, ano, turno, materia, professor):
             con.execute(sql)#Prepara o comando para ser executado
             db_connection.commit()  # Executa o comando no banco de dados
             return "Aula agendada!"
+        else:
+            return "Preencha todos os campos!"
     except Exception as erro:
       return(erro)
 
