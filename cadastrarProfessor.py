@@ -18,6 +18,8 @@ def inserir(email, senha, nome):
             con.execute(sql)#Prepara o comando para ser executado
             db_connection.commit()#Executa o comando no banco de dados
             return"Cadastrado!"
+        else:
+            return "Preencha todos os campos!"
     except Exception as erro:
       print(erro)
 

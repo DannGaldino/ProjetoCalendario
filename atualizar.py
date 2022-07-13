@@ -15,7 +15,7 @@ def atualizarDados(email, campo, novoDado):
             sql = "update professor set {} = '{}'where email = '{}'".format(campo, novoDado, email)
             con.execute(sql)
             db_connection.commit()
-            return "Atualizado"
+            return "Atualizado!"
         else:
             return "Preencha todos os campos!"
     except Exception as erro:
